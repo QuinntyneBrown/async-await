@@ -1,21 +1,27 @@
-﻿export async function translateXY(element: HTMLElement, x: number, y: number) {
-    return new Promise((resolve) => {
-        element.addEventListener('transitionend', removeListenerAndResolve, false);
+﻿function translateXY(htmlElement: HTMLElement, x: number, y: number) {
+    return new Promise(resolve => {
+
+        htmlElement.addEventListener('transitionend', removeListenerAndResolve, false);
+
         ["-moz-transform", "-webkit-transform", "-ms-transform", "-transform"]
-            .map(prop => element.style[prop] = `translate(${x}px, ${y}px)`);
+            .map(prop => htmlElement.style[prop] = `translate(${x}px, ${y}px)`);
 
         function removeListenerAndResolve() {
-            element.removeEventListener('transitionend', removeListenerAndResolve);
+            htmlElement.removeEventListener('transitionend', removeListenerAndResolve);
             resolve();
         }
     });
 }
 
-document.addEventListener("DOMContentLoaded", async function () {
-    const el = document.querySelector(".async-await") as HTMLElement;
+async function animate() {
+    const htmlElement = document.querySelector("div");
 
-    await translateXY(el, 100, 100);
+    await translateXY(htmlElement, 0, 0);
 
-    await translateXY(el, 0, 0);
-})
+    await translateXY(htmlElement, -300, 0);
+
+    await translateXY(htmlElement, 0, 0);
+}
+
+document.addEventListener("DOMContentLoaded", () => setTimeout(animate, 0));
  

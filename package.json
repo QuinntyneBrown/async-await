@@ -4,19 +4,24 @@
   "description": "Async / Await Experimentation using TypeScript 2.1",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "watch": "webpack --watch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/QuinntyneBrown/async-await.git"
   },
   "author": "",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/QuinntyneBrown/async-await/issues"
   },
   "homepage": "https://github.com/QuinntyneBrown/async-await#readme",
   "dependencies": {
-    "@types/core-js": "^0.9.35"
+    "@types/core-js": "^0.9.35",
+    "awesome-typescript-loader": "^3.0.0-beta.9",
+    "webpack": "^1.14.0"
+  },
+  "devDependencies": {
+    "typescript": "^2.1.4"
   }
 }
