@@ -1,0 +1,22 @@
+{
+  "name": "async-await",
+  "version": "1.0.0",
+  "description": "Async / Await Experimentation using TypeScript 2.1",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/QuinntyneBrown/async-await.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/QuinntyneBrown/async-await/issues"
+  },
+  "homepage": "https://github.com/QuinntyneBrown/async-await#readme",
+  "dependencies": {
+    "@types/core-js": "^0.9.35"
+  }
+}
